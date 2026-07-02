@@ -1,145 +1,261 @@
 import React from "react";
 // Skill
 export const SKILLS_DATA = [
-  { 
-    id: 1, 
-    category: 'PROGRAMMING', 
-    title: 'PYTHON', 
-    desc: 'ใช้บ่อยเป็นภาษาหลัก (ML, YOLO)', 
-    icon: <i className="devicon-python-plain colored text-4xl"></i>
+  {
+    id: 1,
+    category: 'PROGRAMMING',
+    title: 'Python',
+    desc: 'Primary language for Backend development, automation, and AI applications.',
+    icon: <i className="devicon-python-plain colored text-3xl"></i>
   },
-  { 
+  {
     id: 2,
     category: 'PROGRAMMING',
-    title: 'FLUTTER',
-    desc: 'พัฒนา Mobile App', 
-    icon: <i className="devicon-flutter-plain colored text-4xl"></i>
+    title: 'Dart',
+    desc: 'Cross-platform mobile application development with Flutter.',
+    icon: <i className="devicon-dart-plain colored text-3xl"></i>
   },
-  { 
+  {
     id: 3,
     category: 'PROGRAMMING',
+    title: 'TypeScript',
+    desc: 'Developing modern web applications with React and Next.js.',
+    icon: <i className="devicon-typescript-plain colored text-3xl"></i>
+  },
+  {
+    id: 4,
+    category: 'FRAMEWORKS',
     title: 'NEXT.JS',
-    desc: 'พัฒนา Web Frontend', 
+    desc: 'Building responsive web applications and portfolio websites.',
     icon: <i className="devicon-nextjs-plain colored text-4xl"></i>
   },
-  { 
-    id: 4, category: 'PROGRAMMING', title: 'TAILWIND', desc: 'จัดการ UI / CSS', 
-    icon: (
-      <svg viewBox="0 0 24 24" fill="currentColor" className="w-10 h-10 text-[#06B6D4]">
-        <path d="M12.001,4.8c-3.2,0-5.2,1.6-6,4.8c1.2-1.6,2.6-2.2,4.2-1.8c0.913,0.228,1.565,0.89,2.288,1.624 C13.666,10.618,15.027,12,18.001,12c3.2,0,5.2-1.6,6-4.8c-1.2,1.6-2.6,2.2-4.2,1.8c-0.913-0.228-1.565-0.89-2.288-1.624 C16.337,6.182,14.976,4.8,12.001,4.8z M6.001,12c-3.2,0-5.2,1.6-6,4.8c1.2-1.6,2.6-2.2,4.2-1.8c0.913,0.228,1.565,0.89,2.288,1.624 c1.177,1.194,2.538,2.576,5.512,2.576c3.2,0,5.2-1.6,6-4.8c-1.2,1.6-2.6,2.2-4.2,1.8c-0.913-0.228-1.565-0.89-2.288-1.624 C10.337,13.382,8.976,12,6.001,12z"/>
-      </svg>
-    )
+  {
+    id: 5,
+    category: 'FRAMEWORKS',
+    title: 'FastAPI',
+    desc: 'Developing RESTful APIs and scalable backend services.',
+    icon: <i className="devicon-fastapi-plain colored text-4xl"></i>
   },
-  { 
-    id: 5, category: 'PROGRAMMING', title: 'UNITY', desc: 'พัฒนาเกม (Game Jam)', 
-    icon: (
-      <svg viewBox="0 0 24 24" fill="currentColor" className="w-10 h-10 text-black">
-        <path d="M18.8 8.4l-4.5-2.7c-.5-.3-1.1-.3-1.6 0L8.2 8.4c-.5.3-.8.8-.8 1.4v5.4c0 .6.3 1.1.8 1.4l4.5 2.7c.5.3 1.1.3 1.6 0l4.5-2.7c.5-.3.8-.8.8-1.4v-5.4c0-.6-.3-1.1-.8-1.4zM12 16.2l-3.3-2 3.3-2 3.3 2-3.3 2zm4.5-5.3L13 13.1V9l3.5-2.1v4zM7.5 10.9l3.5 2.1v4.1l-3.5-2.1v-4z"/>
-      </svg>
-    )
+  {
+    id: 6,
+    category: 'FRAMEWORKS',
+    title: 'Flutter',
+    desc: 'Developing cross-platform mobile applications with modern UI.',
+    icon: <i className="devicon-flutter-plain colored text-4xl"></i>
   },
-  { 
-    id: 6, category: 'PROGRAMMING', title: 'C#', desc: 'เขียนสคริปต์เกม', 
-    icon: (
-      <div className="text-3xl font-black text-[#239120]">C#</div>
-    )
+  {
+    id: 7,
+    category: 'FRAMEWORKS',
+    title: 'React',
+    desc: 'Creating interactive and reusable user interfaces.',
+    icon: <i className="devicon-react-original colored text-4xl"></i>
   },
-  { 
-    id: 7, category: 'PROGRAMMING', title: 'SQL', desc: 'จัดการฐานข้อมูล', 
-    icon: (
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-10 h-10 text-slate-800">
-        <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
-        <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path>
-        <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path>
-      </svg>
-    )
+  {
+    id: 8,
+    category: 'FRAMEWORKS',
+    title: 'Tailwind CSS',
+    desc: 'Building responsive and modern user interfaces efficiently.',
+    icon: <i className="devicon-tailwindcss-original colored text-4xl"></i>
   },
-  { 
-    id: 8, category: 'UX/UI', title: 'FIGMA', desc: 'ออกแบบหน้าจอหลัก', 
-    icon: (
-      <svg viewBox="0 0 24 24" fill="currentColor" className="w-10 h-10 text-[#F24E1E]">
-        <path d="M16 12a4 4 0 11-8 0 4 4 0 018 0zm-8-4a4 4 0 110-8h4v8H8zm8-4a4 4 0 110 8h-4V4h4zm-4 12a4 4 0 11-8 0v-4h4v4zm-4 4a4 4 0 108 0v-4H8v4z"/>
-      </svg>
-    )
+  {
+    id: 9,
+    category: 'DATABASE',
+    title: 'PostgreSQL',
+    desc: 'Database design, migration, and performance optimization.',
+    icon: <i className="devicon-postgresql-plain colored text-4xl"></i>
   },
-  { 
-    id: 9, category: 'UX/UI', title: 'PROTOTYPE', desc: 'ทำ Mockup นำเสนอ', 
-    icon: (
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-10 h-10 text-indigo-600">
-        <rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect>
-        <line x1="12" y1="18" x2="12.01" y2="18"></line>
-      </svg>
-    )
+  {
+    id: 10,
+    category: 'DATABASE',
+    title: 'MongoDB',
+    desc: 'Working with NoSQL databases for scalable applications.',
+    icon: <i className="devicon-mongodb-plain colored text-4xl"></i>
   },
+  {
+    id: 11,
+    category: 'TOOLS',
+    title: 'Docker',
+    desc: 'Containerizing and deploying applications on Ubuntu servers.',
+    icon: <i className="devicon-docker-plain colored text-4xl"></i>
+  },
+  {
+    id: 12,
+    category: 'TOOLS',
+    title: 'Git',
+    desc: 'Version control and collaborative software development.',
+    icon: <i className="devicon-git-plain colored text-4xl"></i>
+  },
+  {
+    id: 13,
+    category: 'TOOLS',
+    title: 'GitHub',
+    desc: 'Managing repositories and team collaboration workflows.',
+    icon: <i className="devicon-github-plain colored text-4xl"></i>
+  }
 ];
 
-// Experience
+// Project
 export const EXPERIENCES_DATA = [
   {
     id: 1,
     category: 'Machine Learning • 2026',
     title: 'Banana Split App',
     techStack: ['Flutter', 'Python', 'YOLO', 'Computer Vision'],
-    description: 'แอปพลิเคชันมือถือสำหรับคัดแยกสายพันธุ์กล้วย พัฒนาด้วย Flutter และใช้ YOLO architecture สำหรับการตรวจจับวัตถุ',
-    duration: '4 Months', // ระยะเวลาทำโปรเจกต์
-    teamSize: '3 Members', // จำนวนสมาชิกในทีม
+    description: 'Mobile application for banana cultivar classification, developed using Flutter and the YOLO object detection architecture. The application enables real-time identification and classification of banana varieties through image-based analysis, enhancing accuracy and efficiency in agricultural data collection.',
+    duration: '2 Months',
+    teamSize: '2 Members',
     images: [
-      'profile.png',
-      'https://images.unsplash.com/photo-1611162617474-5b21e879e113?auto=format&fit=crop&q=80&w=800'
+      '/Project/project1.png',
+      '/Project/project2.png',
     ]
   },
   {
     id: 2,
     category: 'Game Development • 2026',
-    title: 'Soul Melt',
+    title: 'Soul Melt : 2D Action Roguelike Game',
     techStack: ['Unity', 'C#', 'Logic Design'],
-    description: 'โปรโตไทป์เกมการ์ดแนววางแผนที่พัฒนาใน 7-day Game Jam ออกแบบระบบ Logic Flow และ UI ภายในเกม',
+    description: 'A fast-paced 2D Top-Down Roguelike developed for a Game Jam under the theme "Refresh". The game features a 10-floor progressive dungeon with dynamic difficulty scaling, a fruit-based stat upgrade system, and a punishing time-debt mechanic. Key technical highlights include a custom Cinemachine multi-target camera for boss encounters, real-time UI data binding, and cross-platform deployment on itch.io.',
     duration: '7 Days', 
     teamSize: 'Solo Developer',
     images: [
-      'soulmalt3.png',
-      'soulmalt1.png',
-      'soulmalt2.png'
+      '/Project/soulmalt3.png',
+      '/Project/soulmalt1.png',
+      '/Project/soulmalt2.png'
     ]
-  }
+  },
+  {
+    id: 3,
+    category: 'Robot • 2024',
+    title: 'Arduino Black Line Follower Robot',
+    techStack: ['Arduino', 'Circuit'],
+    description: 'Designed and built an Arduino-based line-following robot capable of autonomously navigating a track by following a black line. The project involved programming the Arduino microcontroller to process input from infrared sensors, enabling the robot to adjust its movement in real-time to stay on course. The robot successfully completed the track with high accuracy, demonstrating effective sensor integration and control logic.',
+    duration: '2 Weeks', 
+    teamSize: '5 Members',
+    images: [
+      '/Project/robot1.png',
+      '/Project/robot2.png',
+    ]
+  },
+  {
+    id: 4,
+    category: 'Dashboard • 2024',
+    title: 'Dashboard Company',
+    techStack: ['Python', 'HTML/CSS', 'JavaScript','sqlite'],
+    description: 'Developed a web-based dashboard application for data visualization and business reporting. The system retrieves and processes data from an SQLite database, presenting key metrics and insights through interactive charts and summary panels to support decision-making.',
+    duration: '1 Weeks', 
+    teamSize: '2 Members',
+    images: [
+      '/Project/database1.png',
+      '/Project/database2.png',
+      '/Project/database3.png',
+    ]
+  },
+  {
+    id: 5,
+    category: 'Program • 2024',
+    title: 'Stock web',
+    techStack: ['Djungo', 'HTML/CSS', 'JavaScript','sqlite'],
+    description: 'Developed a web-based stock management system using Django for backend development and SQLite for database management. The application features user authentication, inventory tracking, and real-time data visualization to streamline stock control processes.',
+    duration: '2 Weeks', 
+    teamSize: '4 Members',
+    images: [
+      '/Project/store1.png',
+      '/Project/store2.png',
+    ]
+  },
+  // {
+  //   id: 6,
+  //   category: 'Game Development • 2022',
+  //   title: 'Samurai vs Ninja game : Fighting game',
+  //   techStack: ['Python', 'Pygame'],
+  //   description: 'A 2D fighting game developed using Python and the Pygame library. The game features two playable characters, a samurai and a ninja, each with unique abilities and attack patterns. Players can engage in fast-paced combat, utilizing a variety of moves and combos to defeat their opponent in a dynamic arena setting.',
+  //   duration: '2 Weeks', 
+  //   teamSize: '2 Members',
+  //   images: [
+  //   ]
+  // }
 ];
 
+// Experience
 export const WORKS_DATA = [
   {
     id: 1,
     category: 'Hackathon • 2024',
-    title: 'NU Hackathon & Pitching Participant',
-    description: 'เข้าร่วมการแข่งขันพัฒนาระบบ IoT ภายใน 48 ชั่วโมง โดยรับหน้าที่เป็น Full-stack Developer พัฒนา Dashboard สำหรับมอนิเตอร์ข้อมูลเซ็นเซอร์แบบ Real-time และนำเสนอต่อหน้าคณะกรรมการ',
+    title: 'Full-Stack Developer,UX/UI : NU Hackathon & Pitching Participant',
+    description: (
+      <>
+        - Developed a web application and dashboard for test data visualization.<br />
+        - Designed UX/UI for an intuitive and user-friendly experience.<br />
+        - Collaborated with the team to deliver a functional MVP within 48 hours.
+      </>
+    ),
     images: [
       '/hackathon.jpg'
     ]
   },
   {
     id: 2,
-    category: 'Game Jam • 2026',
-    title: 'Thailand Summer Jam 2026',
-    description: 'แข่งขันสร้างเกมภายใน 7 วัน ร่วมกับทีมพัฒนาเกมการ์ดแนววางแผน รับผิดชอบในส่วนของการเขียนสคริปต์ C# บน Unity และออกแบบระบบ Logic Flow',
+    category: 'Intern • 2026',
+    title: 'Backend Developer Internship : Botnoi Consulting',
+    description: (
+      <>
+        - Designed and developed RESTful APIs for data management systems.<br />
+        - Improved the medical staff rostering Web Admin by synchronizing Frontend and Backend.<br />
+        - Built a backend module to convert Excel data into image formats automatically.
+      </>
+    ),
     images: [
-      'Phiraphat_TSJ2026.png'
+      'Experience/Botnoi1.png',
+      'Experience/Botnoi2.png'
     ]
   },
   {
     id: 3,
-    category: 'Intern • 2026',
-    title: 'Internship : Botnoi Consulting',
-    description: 'แข่งขันสร้างเกมภายใน 7 วัน ร่วมกับทีมพัฒนาเกมการ์ดแนววางแผน รับผิดชอบในส่วนของการเขียนสคริปต์ C# บน Unity และออกแบบระบบ Logic Flow',
+    category: 'Staff • 2025',
+    title: 'Event Staff : Thailand Game Show 2025',
+    description: (
+      <>
+        - Introduced game features to attendees and guided gameplay demonstrations.<br />
+        - Assisted visitors and provided event support.<br />
+        - Collaborated with the team to manage booth activities efficiently.
+      </>
+    ),
     images: [
-      'Phiraphat_TSJ2026.png'
+      'Experience/tgs1.jpg',
+      'Experience/tgs2.jpg'
     ]
   },
   {
     id: 4,
-    category: 'Staff • 2025',
-    title: 'Event Staff : Thailand Game Show 2025',
-    description: 'แข่งขันสร้างเกมภายใน 7 วัน ร่วมกับทีมพัฒนาเกมการ์ดแนววางแผน รับผิดชอบในส่วนของการเขียนสคริปต์ C# บน Unity และออกแบบระบบ Logic Flow',
+    category: 'Pitching • 2024',
+    title: 'Pitching P1 Startup Competition',
+    description: (
+      <>
+        - Presented project ideas to judges and audiences in a startup pitching competition.<br />
+        - Demonstrated the product concept, technical implementation, and business value.<br />
+        - Strengthened presentation, teamwork, and communication skills.
+      </>
+    ),
     images: [
-      '73310.jpg',
-      '73312_0.jpg'
+      'Experience/Pitching1.png',
+      'Experience/Pitching2.png',
+      'Experience/Pitching3.png'
+    ]
+  },
+  {
+    id: 5,
+    category: 'Intern • 2023',
+    title: 'Backend Developer Internship : Graduate School, Naresuan University',
+    description: (
+      <>
+        - Deployed production servers on Ubuntu using Docker and Docker Compose.<br />
+        - Migrated legacy SQLite databases to PostgreSQL for improved performance.<br />
+        - Developed a secure PDF viewing platform with URL Token authentication.
+      </>
+    ),
+    images: [
+      'Experience/nu1.jpg',
+      'Experience/nu2.jpg',
     ]
   }
 ];
@@ -147,50 +263,28 @@ export const WORKS_DATA = [
 export const JOURNEY_DATA = [
   {
     id: 1,
-    years: '2025 — 2026',
-    role: 'Software Developer Intern',
-    organization: 'Tech Company Name • Bangkok',
-    description: 'ฝึกงานในตำแหน่ง Full-stack Developer รับผิดชอบการพัฒนาฟีเจอร์ใหม่ให้กับ Web Application ด้วย Next.js และทำงานร่วมกับทีมผ่านระบบ Agile'
-  },
-  {
-    id: 2,
     years: '2022 — 2026',
-    role: 'B.Eng. in Computer Engineering',
-    organization: 'University Name • Location',
-    description: 'สำเร็จการศึกษาปริญญาตรีวิศวกรรมคอมพิวเตอร์ ทำโปรเจกต์จบ (Senior Project) เกี่ยวกับการประยุกต์ใช้ Machine Learning (YOLO) สำหรับการคัดแยกวัตถุ'
-  },
-  {
-    id: 3,
-    years: '2019 — 2022',
-    role: 'High School (Science-Math)',
-    organization: 'High School Name • Location',
-    description: 'ศึกษาแผนการเรียนวิทยาศาสตร์-คณิตศาสตร์ เริ่มต้นความสนใจด้านการเขียนโปรแกรมและการพัฒนาเกมเบื้องต้น'
+    role: 'Bachelor of Engineering in Computer Engineering',
+    organization: 'Naresuan University • Phitsanulok',
+    description: '3.13 GPAX'
   }
 ];
 
 export const CERTIFICATIONS_DATA = [
   {
     id: 1,
-    title: 'AWS Certified Cloud Practitioner',
-    issued: 'ISSUED MAR 2026',
+    title: 'Google AI Essentials',
+    issued: 'ISSUED September 2024',
     icon: (
       <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" /></svg>
     )
   },
   {
     id: 2,
-    title: 'Google Data Analytics Professional',
-    issued: 'ISSUED DEC 2025',
+    title: 'Google Cybersecurity',
+    issued: 'ISSUED August 2024',
     icon: (
-      <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" /></svg>
-    )
-  },
-  {
-    id: 3,
-    title: 'EF SET English Certificate (C1)',
-    issued: 'ISSUED OCT 2025',
-    icon: (
-      <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129" /></svg>
+      <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" /></svg>
     )
   }
 ];

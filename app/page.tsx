@@ -203,12 +203,6 @@ export default function PortfolioPage() {
               alt="Profile" 
               className="w-full h-auto aspect-[4/5] object-cover rounded-2xl shadow-sm"
             />
-
-            {/* ป้ายวงกลม ปรับขนาดให้เล็กลงนิดหน่อยบนมือถือ */}
-            <div className="absolute -bottom-6 -right-4 lg:-bottom-8 lg:-right-8 w-28 h-28 lg:w-32 lg:h-32 bg-rose-900 rounded-full flex flex-col items-center justify-center text-white shadow-xl">
-              <span className="text-xl lg:text-2xl font-bold">100+</span>
-              <span className="text-[10px] lg:text-xs font-semibold tracking-wider uppercase mt-1">Commits</span>
-            </div>
           </div>
 
           {/* Text */}
@@ -217,7 +211,6 @@ export default function PortfolioPage() {
               Meet The Developer
             </h3> */}
             
-            {/* ปรับขนาดฟอนต์ให้พอดีกับมือถือ (text-4xl) และคอม (lg:text-6xl) */}
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-slate-900 leading-tight mb-4 lg:mb-6 tracking-tight">
               <span className="block">Hi I'm Penguin</span>
               <span className="block text-rose-900 md:text-4xl lg:text-5xl">Phiraphat Thiangthit</span>
@@ -243,10 +236,10 @@ export default function PortfolioPage() {
                 <h4 className="text-2xl lg:text-3xl font-black text-slate-900 mb-1">5+</h4>
                 <p className="text-[10px] lg:text-xs text-slate-500 font-semibold tracking-wider uppercase">Projects</p>
               </div>
-              <div>
+              {/* <div>
                 <h4 className="text-2xl lg:text-3xl font-black text-slate-900 mb-1">3</h4>
                 <p className="text-[10px] lg:text-xs text-slate-500 font-semibold tracking-wider uppercase">Tech Stacks</p>
-              </div>
+              </div> */}
             </div>
 
             <div className="flex flex-col sm:flex-row justify-center lg:justify-start gap-3 lg:gap-4">
@@ -278,17 +271,16 @@ export default function PortfolioPage() {
       <section id="skills" className="py-24 bg-[#F8F9FC] scroll-mt-24">
         <div className="max-w-5xl mx-auto px-6">
           
-          {/* Header ส่วนบน */}
+          {/* Header */}
           <div className="text-center mb-14">
             <h2 className="text-3xl md:text-4xl font-extrabold text-slate-900 mb-4 tracking-tight">
               Technical Skills
             </h2>
-            <p className="text-slate-500 max-w-2xl mx-auto text-sm md:text-base leading-relaxed mb-10">
-              I leverage a diverse toolkit to bring complex visions to life, focusing on performance, accessibility, and aesthetic excellence.
-            </p>
+
             
-            {/* ปุ่ม Filter หมวดหมู่ */}
-            <div className="flex justify-center gap-3">
+            {/* Filter Type*/}
+            <div className="flex flex-wrap justify-center gap-3">
+              
               <button 
                 onClick={() => { setActiveFilter('PROGRAMMING'); setShowMore(false); }}
                 className={`px-6 py-2 rounded-full font-semibold text-sm transition-all duration-300 ${
@@ -299,16 +291,40 @@ export default function PortfolioPage() {
               >
                 Programming
               </button>
+
               <button 
-                onClick={() => { setActiveFilter('UX/UI'); setShowMore(false); }}
+                onClick={() => { setActiveFilter('FRAMEWORKS'); setShowMore(false); }}
                 className={`px-6 py-2 rounded-full font-semibold text-sm transition-all duration-300 ${
-                  activeFilter === 'UX/UI' 
+                  activeFilter === 'FRAMEWORKS' 
                     ? 'bg-slate-900 text-white shadow-md' 
                     : 'bg-white text-slate-600 border border-slate-200 hover:border-slate-300 hover:bg-slate-50'
                 }`}
               >
-                UX/UI
+                Frameworks & Lib
               </button>
+
+              <button 
+                onClick={() => { setActiveFilter('DATABASE'); setShowMore(false); }}
+                className={`px-6 py-2 rounded-full font-semibold text-sm transition-all duration-300 ${
+                  activeFilter === 'DATABASE' 
+                    ? 'bg-slate-900 text-white shadow-md' 
+                    : 'bg-white text-slate-600 border border-slate-200 hover:border-slate-300 hover:bg-slate-50'
+                }`}
+              >
+                Database
+              </button>
+
+              <button 
+                onClick={() => { setActiveFilter('TOOLS'); setShowMore(false); }}
+                className={`px-6 py-2 rounded-full font-semibold text-sm transition-all duration-300 ${
+                  activeFilter === 'TOOLS' 
+                    ? 'bg-slate-900 text-white shadow-md' 
+                    : 'bg-white text-slate-600 border border-slate-200 hover:border-slate-300 hover:bg-slate-50'
+                }`}
+              >
+                Tools
+              </button>
+
             </div>
           </div>
 
@@ -362,22 +378,16 @@ export default function PortfolioPage() {
       <section id="projects" className="py-24 bg-[#F4F7FC] scroll-mt-24">
         <div className="max-w-7xl mx-auto px-6">
           
-          {/* Header ด้านบน แบ่งซ้าย-ขวา */}
+          {/* Header */}
           <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-16 gap-6">
             <div>
-              <h4 className="text-rose-600 font-bold tracking-widest text-xs uppercase mb-3">
-                Selected Projects
-              </h4>
               <h2 className="text-3xl md:text-5xl font-extrabold text-slate-900 tracking-tight">
-                Projects
+                 Projects
               </h2>
             </div>
-            <p className="text-slate-500 max-w-sm text-sm md:text-base leading-relaxed md:text-right">
-              A collection of work focused on digital branding, UI/UX systems, and high-performance development.
-            </p>
           </div>
 
-          {/* แสดงการ์ดผลงาน (แบ่งเป็น 2 คอลัมน์บนจอใหญ่) */}
+          {/* Card */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-16">
             {EXPERIENCES_DATA.map((project) => (
               <ExperienceCard key={project.id} data={project} />
@@ -401,9 +411,6 @@ export default function PortfolioPage() {
                 Experience
               </h2>
             </div>
-            <p className="text-slate-500 max-w-md text-sm md:text-base leading-relaxed md:text-right">
-              A showcase of my participation in fast-paced development events, demonstrating teamwork, adaptability, and rapid prototyping skills under pressure.
-            </p>
           </div>
 
           {/* แสดงการ์ดผลงานแบบเรียงลงมาทีละอัน */}
@@ -449,16 +456,16 @@ export default function PortfolioPage() {
             ))}
           </div>
 
-          {/* กล่อง Certifications */}
+          {/* Certifications */}
           <div className="mt-8 bg-[#F4F7FC] p-8 md:p-12 rounded-3xl">
             
-            {/* Header กล่อง */}
+            {/* Header */}
             <div className="flex items-center gap-3 mb-8">
               <svg className="w-6 h-6 text-rose-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" /></svg>
               <h3 className="text-2xl font-extrabold text-slate-900">Certifications</h3>
             </div>
 
-            {/* Grid แสดงใบเซอร์ */}
+            {/* Grid */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
               {CERTIFICATIONS_DATA.map((cert) => (
                 <div key={cert.id} className="bg-white p-5 rounded-2xl border border-slate-100 flex items-center gap-4 hover:shadow-md transition-shadow">
@@ -473,17 +480,6 @@ export default function PortfolioPage() {
               ))}
             </div>
 
-            {/* ปุ่มดาวน์โหลด CV */}
-            <div className="mt-10 flex justify-center">
-              <a 
-                href="/Resume_P.pdf" 
-                target="_blank"
-                className="px-8 py-3 border-2 border-rose-200 text-rose-700 font-bold text-sm rounded-full hover:bg-rose-50 hover:border-rose-300 transition-all duration-300"
-              >
-                Download CV / PDF
-              </a>
-            </div>
-
           </div>
 
         </div>
@@ -495,17 +491,17 @@ export default function PortfolioPage() {
         {/* เปลี่ยนพื้นหลังเป็นสีแดงเข้ม (red-900) */}
         <div className="bg-[#7f1d1d] py-28 px-6 text-center">
           <h2 className="text-4xl md:text-6xl font-extrabold text-white mb-6 tracking-tight">
-            Let's build something <span className="text-[#fca5a5]">remarkable.</span>
+            Let's build impactful software <span className="text-[#fca5a5]">together.</span>
           </h2>
           <p className="text-red-100 max-w-lg mx-auto text-sm md:text-base leading-relaxed mb-10 opacity-90">
-            I'm currently looking for opportunities in Software Development and IoT. Feel free to reach out to discuss projects or job roles.
+            I'm a Computer Engineering graduate passionate about Full-Stack Development, Backend Engineering, and AI. I'm currently seeking opportunities where I can build scalable applications, solve real-world problems, and continue growing as a software engineer.
           </p>
           
           <a 
-            href="mailto:your.email@example.com" 
+            href="mailto:phiraphatthiangthit@gmail.com" 
             className="inline-block px-10 py-4 bg-white text-[#7f1d1d] font-bold text-lg rounded-full hover:scale-105 transition-transform duration-300 shadow-xl"
           >
-            hello@your-email.com
+            phiraphatthiangthit@gmail.com
           </a>
         </div>
 
@@ -524,8 +520,7 @@ export default function PortfolioPage() {
 
             <ul className="flex flex-wrap justify-center gap-6 md:gap-8 text-[13px] font-bold text-slate-600">
               <li><a href="https://www.linkedin.com/in/phiraphat-thiangthit/" className="hover:text-[#7f1d1d] transition-colors">LinkedIn</a></li>
-              <li><a href="#" className="hover:text-[#7f1d1d] transition-colors">GitHub</a></li>
-              <li><a href="#" className="hover:text-[#7f1d1d] transition-colors">Medium</a></li>
+              <li><a href="https://github.com/LemoneyShark" className="hover:text-[#7f1d1d] transition-colors">GitHub</a></li>
               <li><a href="#" className="hover:text-[#7f1d1d] transition-colors">Instagram</a></li>
             </ul>
 
