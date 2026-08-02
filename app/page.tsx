@@ -195,7 +195,7 @@ export default function PortfolioPage() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           
           {/* My pics */}
-          <div className="relative mx-auto w-full max-w-sm md:max-w-md mt-6 lg:mt-0 order-1 lg:order-none">
+          <div className="relative mx-auto w-full max-w-[260px] sm:max-w-sm md:max-w-md mt-6 lg:mt-0 order-1 lg:order-none">
             <div className="absolute -inset-3 lg:-inset-4 bg-rose-50 rounded-3xl -z-10"></div>
             
             <img 
@@ -246,20 +246,14 @@ export default function PortfolioPage() {
               
               {/* resume */}
               <a 
-                href="/resume_phiraphat.pdf" 
+                href="/Resume_Datasupport_TH.pdf" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="px-8 py-3.5 bg-rose-900 text-white font-semibold rounded-full hover:bg-rose-800 transition shadow-md w-full sm:w-auto text-center"
+                className="px-8 py-3.5 bg-transparent border-2 border-slate-300 text-slate-700 font-semibold rounded-full hover:border-slate-400 hover:text-slate-900 transition w-full sm:w-auto text-center"
               >
                 View Resume
               </a>
               
-              <a 
-                href="#contact" 
-                className="px-8 py-3.5 bg-transparent border-2 border-slate-300 text-slate-700 font-semibold rounded-full hover:border-slate-400 hover:text-slate-900 transition w-full sm:w-auto text-center"
-              >
-                Contact Me
-              </a>
               
             </div>
           </div>
@@ -503,7 +497,10 @@ export default function PortfolioPage() {
           >
             phiraphatthiangthit@gmail.com
           </a>
+          
+
         </div>
+        
 
         {/* ส่วน Footer ลิงก์ */}
         <div className="bg-white py-12 px-6">
@@ -521,7 +518,6 @@ export default function PortfolioPage() {
             <ul className="flex flex-wrap justify-center gap-6 md:gap-8 text-[13px] font-bold text-slate-600">
               <li><a href="https://www.linkedin.com/in/phiraphat-thiangthit/" className="hover:text-[#7f1d1d] transition-colors">LinkedIn</a></li>
               <li><a href="https://github.com/LemoneyShark" className="hover:text-[#7f1d1d] transition-colors">GitHub</a></li>
-              <li><a href="#" className="hover:text-[#7f1d1d] transition-colors">Instagram</a></li>
             </ul>
 
           </div>

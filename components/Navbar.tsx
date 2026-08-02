@@ -1,5 +1,5 @@
 "use client";
-import React, { useState,useEffect} from 'react';
+import React, { useState, useEffect } from 'react';
 
 export default function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -13,9 +13,7 @@ export default function Navbar() {
       let current = '';
 
       sections.forEach((section) => {
-        // หาตำแหน่งด้านบนของแต่ละ Section
         const sectionTop = (section as HTMLElement).offsetTop;
-        // ถ้าระยะการเลื่อน (scrollY) มาถึง Section นั้นแล้ว (-150 คือเผื่อระยะความสูง Navbar ไว้)
         if (window.scrollY >= sectionTop - 150) {
           current = section.getAttribute('id') || '';
         }
@@ -24,9 +22,7 @@ export default function Navbar() {
       setActiveSection(current);
     };
 
-    // สั่งให้ระบบเรียกฟังก์ชันนี้ทุกครั้งที่เลื่อนจอ
     window.addEventListener('scroll', handleScroll);
-    // ทำงาน 1 ครั้งตอนเปิดเว็บ เพื่อเช็คตำแหน่งปัจจุบัน
     handleScroll();
 
     return () => window.removeEventListener('scroll', handleScroll);
@@ -40,7 +36,6 @@ export default function Navbar() {
           Portfolio.
         </div>
 
-        {/* 3. เมนูจอคอม: ใช้เงื่อนไขเช็คว่าถ้า activeSection ตรงกับชื่อลิงก์ ให้แสดงสีน้ำเงิน (text-rose-600) */}
         <ul className="hidden md:flex gap-8 font-semibold text-sm">
           <li>
             <a href="#about" className={`transition-all duration-200 active:scale-95 inline-block ${activeSection === 'about' ? 'text-rose-600' : 'text-slate-600 hover:text-slate-900'}`}>
@@ -69,14 +64,28 @@ export default function Navbar() {
           </li>
         </ul>
 
-        {/* ปุ่มด้านขวาและปุ่ม Hamburger (เหมือนเดิม) */}
-        <div className="flex items-center gap-4">
+        {/* ปุ่มด้านขวา */}
+        <div className="flex items-center gap-3">
+          
+          {/* ปุ่ม Download Resume (จอคอม) */}
+          <a
+            href="/Resume_Datasupport_TH.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hidden md:flex items-center gap-1.5 px-5 py-2.5 bg-rose-50 text-rose-700 text-sm font-bold rounded-full border border-rose-100 hover:bg-rose-100 hover:text-rose-800 transition"
+          >
+            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+            </svg>
+            Resume
+          </a>
+
           <a href="#contact" className="hidden md:inline-block px-6 py-2.5 bg-rose-900 text-white text-sm font-semibold rounded-full hover:bg-rose-800 transition">
             Contact
           </a>
           
           <button 
-            className="md:hidden text-slate-900 focus:outline-none"
+            className="md:hidden text-slate-900 focus:outline-none ml-2"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
             <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -90,7 +99,7 @@ export default function Navbar() {
         </div>
       </div>
 
-      {/* 4. เมนูมือถือ: เพิ่มการไฮไลต์สีน้ำเงินให้เหมือนกันค่ะ */}
+      {/* เมนูมือถือ */}
       {isMobileMenuOpen && (
         <div className="md:hidden absolute top-full left-0 w-full bg-white border-b border-slate-200 shadow-lg">
           <ul className="flex flex-col px-6 py-4 space-y-4 font-semibold text-center">
@@ -99,7 +108,21 @@ export default function Navbar() {
             <li><a href="#projects" onClick={() => setIsMobileMenuOpen(false)} className={activeSection === 'projects' ? 'text-rose-600' : 'text-slate-600'}>Project</a></li>
             <li><a href="#experience" onClick={() => setIsMobileMenuOpen(false)} className={activeSection === 'experience' ? 'text-rose-600' : 'text-slate-600'}>Experience</a></li>
             <li><a href="#journey" onClick={() => setIsMobileMenuOpen(false)} className={activeSection === 'journey' ? 'text-rose-600' : 'text-slate-600'}>Journey</a></li>
-            <li className="pt-2 border-t border-slate-100">
+            
+            <li className="pt-4 mt-2 border-t border-slate-100 flex flex-col gap-3">
+              {/* ปุ่ม Download Resume (จอมือถือ) */}
+              <a 
+                href="/Resume_Datasupport_TH.pdf" 
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-slate-600 flex items-center justify-center gap-2 hover:text-rose-600" 
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                </svg>
+                Download Resume
+              </a>
               <a href="#contact" className="text-rose-600" onClick={() => setIsMobileMenuOpen(false)}>Hire Me</a>
             </li>
           </ul>
@@ -108,5 +131,3 @@ export default function Navbar() {
     </nav>
   );
 }
-
-//End Navbar

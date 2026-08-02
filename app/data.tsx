@@ -97,6 +97,18 @@ export const SKILLS_DATA = [
 // Project
 export const EXPERIENCES_DATA = [
   {
+    id: 6,
+    category: 'Dashboard • 2026',
+    title: 'Nutritional Tracking Dashboard',
+    techStack: ['Google Apps Script', 'Google Sheets'],
+    description: 'Developed a serverless full-stack web application for real-time macronutrient tracking, utilizing Google Apps Script and Google Sheets as the backend database.',
+    duration: '1 Hour', 
+    teamSize: '1 Members',
+    images: [
+      '/Project/Tracker1.png',
+    ]
+  },
+  {
     id: 1,
     category: 'Machine Learning • 2026',
     title: 'Banana Split App',
@@ -163,6 +175,7 @@ export const EXPERIENCES_DATA = [
       '/Project/store2.png',
     ]
   },
+  
   // {
   //   id: 6,
   //   category: 'Game Development • 2022',
